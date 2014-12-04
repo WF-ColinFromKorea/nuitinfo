@@ -1,10 +1,12 @@
                         <section id="camp">
                             <div class="container">
                                 <div class="row">
+                                    <br>
                                     <div class="col-lg-9 text-center">
                                         <h3>Ajouter un camp</h3>
                                     </div>
                                 </div>
+                                <br>
                                 <div class="row">
                                     <div class="col-lg-8 col-lg-offset-2">
                                         <form name="start" id="start" novalidate>
@@ -14,14 +16,14 @@
                                                     <input type="nom" class="form-control" placeholder="nom" id="nom">
                                                 </div>
                                             </div>
-                                            
+                                            <br>
                                             <div class="row">
                                                 <div class="col-xs-7">
                                                     <label>Position</label>
                                                     <input type="position" class="form-control" placeholder="position" id="position">
                                                 </div>
                                             </div>
-                                            
+                                            <br>
                                             <div class="row">
                                                 <div class="col-xs-7">
                                                     <label>Capacité</label>
