@@ -24,7 +24,7 @@
                                             
                                             <div class="row">
                                                 <div class="col-xs-7">
-                                                    <label>Numéro</label>
+                                                    <label>Capacité</label>
                                                     <input type="capacite" class="form-control" placeholder="capacite" id="capacite">
                                                 </div>
                                             </div>
