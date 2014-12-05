@@ -57,49 +57,55 @@
 			<div class="row">
 				<div class="col-md-2 hidden-xs hidden-sm"></div>
 				<div class="col-xs-12 col-sm-12 col-md-8 back_grey main_content">
-					
-<div class="row entry_panel light">
-    <section class="topsearch">
-        <div class="row">
-            <div class="col-md-5">
-                <h3>Liste des camps</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-5">
-                <form method="GET">
-                    <input type="text" name="search" placeholder="Rechercher..." />
-                    <input type="submit" value="Rechercher" />
-                </form>
-            </div>
-        </div>
-    </section>
-    <section>
-        <table  class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Position</th>
-                    <th>Capacité</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for camp in camps %}
-                    <tr>
-                        <td>{{ camp.nom }}</td>
-                        <td>{ camp.position }}</td>
-                        <td>{{ camp.capacite }}</td>
-                        <td><a href="{{ path('deppop_back_end_editionCamp', {id: camp.id}) }}" class="btn btn-success btn-lg"><i class="fa fa-pencil"></i> Editer</a></td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </section>
-</div>
-				
-                </div>
+					<div class="row entry_panel light">
+                        
+                        <section id="camp">
+                            <div class="container">
+                                <div class="row">
+                                    <br>
+                                    <div class="col-lg-9 text-center">
+                                        <h3>Ajouter un camp</h3>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-8 col-lg-offset-2">
+                                        <form name="start" id="start" novalidate>
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <label>Nom</label>
+                                                    <input type="nom" class="form-control" placeholder="nom" id="nom">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <label>Position</label>
+                                                    <input type="position" class="form-control" placeholder="position" id="position">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <label>Capacité</label>
+                                                    <input type="capacite" class="form-control" placeholder="capacite" id="capacite">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <button type="submit" value="Ajouter" class="btn btn-success btn-lg">Ajouter</button>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+					</div>
+				</div>
 				<div class="col-md-2 hidden-xs hidden-sm"></div>
 			</div>
 		</main>

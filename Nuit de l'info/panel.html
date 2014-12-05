@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Blog - Index</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-column.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body>
+		<header id="header">
+			<div class="row">
+				<h1 class="hidden">Blog</h1>
+				
+				<div class="col-md-2 hidden-xs hidden-sm color_bar light_grey"></div>
+				
+				<div class="col-xs-12 col-sm-12 col-md-8 color_bar dark_grey">
+					<nav class="navbar-centered" role="navigation">
+						<h2 class="hidden">navbar</h2>
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="blog.html">
+									<span class="fa-stack fa-2x">
+										<i class="fa fa-square-o fa-stack-2x hidden"></i>
+										<i class="fa fa-newspaper-o fa-stack-1x"></i>
+									</span>
+								</a>
+								
+								<a href="home">
+                                    <i class="fa fa-plus-square fa-5x"></i>
+								</a>
+
+								<a href="search">
+									<span class="fa-stack fa-2x">
+										<i class="fa fa-square-o fa-stack-2x hidden"></i>
+										<i class="fa fa-search fa-stack-1x"></i>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				
+				<div class="col-md-2 hidden-xs hidden-sm color_bar light_grey"></div>
+			</div>
+		</header>
+		
+        <main id="wrap">
+<script>
+	$('#tabs a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	});
+
+</script>
+
+<div class="row">
+    <div class="col-md-2 hidden-xs hidden-sm"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 back_grey main_content">
+        <div class="row entry_panel light">
+            <section class="col-md-12 panel_contents row">
+                <h2 class="text-center">Search a center</h2>
+                
+                    <div role="tabpanel" class="col-md-12">
+                        <ul class="nav nav-tabs nav-justified" role="tablist" id="tabs">
+                            <li class="active"><a href="#byState" aria-controls="byState" role="tab" data-toggle="tab">By state</a></li>
+                            <li><a href="#byLocalisation" aria-controls="byLocalisation" role="tab" data-toggle="tab">By localisation</a></li>
+                        </ul>
+                    </div>
+            <div class="row col-md-12 panel white">
+                <section id="panel">
+                    <div class="tab-content" class="col-md-offset-2 col-md-10">
+                        <div role="tabpanel" class="tab-pane fade in active" id="byState">
+                            <p>lol<br>lol<br>lol<br>lol<br>lol<br>lol<br>lol<br>lol<br>lol<br>lol<br>lol<br></p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="byLocalisation">
+                            <p>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br>lol2lol<br></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            </section>
+        </div>
+    </div>
+    <div class="col-md-2 hidden-xs hidden-sm"></div>
+</div>		</main>
+		
+		<footer id="footer">
+			<div class="row">
+				<div class="col-md-2 hidden-xs hidden-sm color_bar light_grey"></div>
+				<div class="col-md-8 color_bar dark_grey">
+					<div class="row">
+						<div class="col-md-6 entry_panel">
+							<h3 class="text-center"><i class="fa fa-rocket"></i> Navigation</h3>
+							<ul class="nav">
+								<li><a href="index.html"><i class="fa fa-cloud"></i> Accueil</a></li>
+								<li><a href="blog.html"><i class="fa fa-newspaper-o"></i> Billets</a></li>
+								<li><a href="contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
+							</ul>
+						</div>
+
+						<div class="col-md-5 entry_panel">
+							<h3 class="text-center"><i class="fa fa-info-circle"></i> Informations</h3>
+							<ul class="nav">
+								<li><i class="fa fa-user"></i> R�alis� par Arthur Laurent</li>
+								<li><i class="fa fa-user"></i> R�alis� par Nicolas Martinez</li>
+								<li><i class="fa fa-copyright"></i> Copyleft 2014 IUT Arles</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 hidden-xs hidden-sm color_bar light_grey"></div>
+			</div>
+		</footer>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="resources/js/bootstrap.min.js"></script>
+	</body>
+</html>
