@@ -30,7 +30,7 @@
 					&q={{ camp.position.x }},{{ camp.position.y }}">
 				</iframe></td>
 				<td>{{ camp.capacite }}</td>
-				<td><a href="{{ path('deppop_back_end_editionCamp', {id: camp.id}) }}">Editer</a> | <a href="{{ path('deppop_back_end_suppressionCamp', {id: camp.id}) }}">Supprimer</a</td>
+				<td><a href="{{ path('deppop_back_end_editionCamp', {id: camp.id}) }}"><i class="fa fa-pencil-square-o"></i> Editer</a> | <a href="{{ path('deppop_back_end_suppressionCamp', {id: camp.id}) }}">Supprimer</a</td>
 			</tr>
 		{% endfor %}
 	</tbody>
