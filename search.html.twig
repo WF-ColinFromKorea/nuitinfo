@@ -1,0 +1,89 @@
+{% extends "deppopBackEndBundle::layout.html.twig" %}
+
+{% block body %}
+<section class="topsearch">
+  <div class="row">
+      <div class="col-md-5">
+          {% include "deppopBackEndBundle:Default:navigation.html.twig" %}
+          <h3>Recherche</h3>
+      </div>
+  </div>
+
+  <form method="GET">
+      <div class="row">
+          <div class="col-xs-8">
+              Recherche par : 
+              <input type=checkbox id=check1> Nom
+              <input type=checkbox id=check2> Prénom
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-8">
+              <span id=bar1><input type="text" name="nom" placeholder="Rechercher Nom"></span>
+              <span id=bar2><input type="text" name="prenom" placeholder="Rechercher Prénom"></span>
+              <span id=search><input type="submit" value="Rechercher"></span>
+          </div>
+      </div>
+  </form>
+  </section>
+  <section>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for refugie in refugies %}
+          <tr>
+              <td>{{ refugie.nom }}</td>
+              <td>{{ refugie.prenom }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  </section>
+{% endblock %}
+
+{% block js %}
+  <script>
+    $(function(){
+        var Span1 = $("#bar1").hide();
+        var Span2 = $("#bar2").hide();
+        var SpanSearch = $("#search").hide();
+        $("#check1, #check2").click(function(){
+            if($("#check1").is(":checked") && $("#check2").is(":checked")){
+                Span1.show();
+                Span2.show();
+                SpanSearch.show();
+            }
+            else{
+                Span1.hide();
+                Span2.hide();
+                SpanSearch.hide();
+                }
+        });
+    });
+    $(function(){
+        var Span1 = $("#bar1").hide();
+        var Span2 = $("#bar2").hide();
+        var SpanSearch = $("#search").hide();
+        $("#check1, #check2").click(function(){
+            if($("#check1").is(":checked")){
+                Span1.show();
+                SpanSearch.show();
+            }
+            else if($("#check2").is(":checked")){
+                Span2.show();
+                SpanSearch.show();
+            }
+            else{
+                Span1.hide();
+                Span2.hide();
+                SpanSearch.hide();
+            }
+        });
+    });
+  </script>
+{% endblock %}
