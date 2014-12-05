@@ -33,18 +33,18 @@
 								<a href="blog.html">
 									<span class="fa-stack fa-2x">
 										<i class="fa fa-square-o fa-stack-2x hidden"></i>
-										<i class="fa fa-newspaper-o fa-stack-1x"></i>
+                                        <i class="fa fa-cogs fa-1x"></i>
 									</span>
 								</a>
 								
 								<a href="index.html">
-                                    <i class="fa fa-plus-square fa-5x"></i>
+                                    <i class="fa fa-flask fa-5x"></i>
 								</a>
 
 								<a href="contact.html">
 									<span class="fa-stack fa-2x">
 										<i class="fa fa-square-o fa-stack-2x hidden"></i>
-										<i class="fa fa-envelope-o fa-stack-1x"></i>
+                                        <i class="fa fa-search fa-1x"></i>
 									</span>
 								</a>
 							</li>
@@ -61,108 +61,108 @@
 				<div class="col-md-2 hidden-xs hidden-sm"></div>
 				<div class="col-xs-12 col-sm-12 col-md-8 back_grey main_content">
 					
-<div class="row entry_panel light">
-    <section class="topsearch">
-        <div class="row">
-            <div class="col-md-5">
-                {% include "deppopBackEndBundle:Default:navigation.html.twig" %}
-                <h3>Liste des réfugiés</h3>
-            </div>
-        </div>
-<script>
-    $(function(){
-        var Span1 = $("#bar1").hide();
-        var Span2 = $("#bar2").hide();
-        var SpanSearch = $("#search").hide();
-        $("#check1, #check2").click(function(){
-            if($("#check1").is(":checked") && $("#check2").is(":checked")){
-                Span1.show();
-                Span2.show();
-                SpanSearch.show();
-            }
-            else{
-                Span1.hide();
-                Span2.hide();
-                SpanSearch.hide();
-                }
-        });
-    });
-    $(function(){
-        var Span1 = $("#bar1").hide();
-        var Span2 = $("#bar2").hide();
-        var SpanSearch = $("#search").hide();
-        $("#check1, #check2").click(function(){
-            if($("#check1").is(":checked")){
-                Span1.show();
-                SpanSearch.show();
-            }
-            else if($("#check2").is(":checked")){
-                Span2.show();
-                SpanSearch.show();
-            }
-            else{
-                Span1.hide();
-                Span2.hide();
-                SpanSearch.hide();
-            }
-        });
-    });
-</script>
+                    <div class="row entry_panel light">
+                        <section class="topsearch">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    {% include "deppopBackEndBundle:Default:navigation.html.twig" %}
+                                    <h3>Liste des réfugiés</h3>
+                                </div>
+                            </div>
+                    <script>
+                        $(function(){
+                            var Span1 = $("#bar1").hide();
+                            var Span2 = $("#bar2").hide();
+                            var SpanSearch = $("#search").hide();
+                            $("#check1, #check2").click(function(){
+                                if($("#check1").is(":checked") && $("#check2").is(":checked")){
+                                    Span1.show();
+                                    Span2.show();
+                                    SpanSearch.show();
+                                }
+                                else{
+                                    Span1.hide();
+                                    Span2.hide();
+                                    SpanSearch.hide();
+                                    }
+                            });
+                        });
+                        $(function(){
+                            var Span1 = $("#bar1").hide();
+                            var Span2 = $("#bar2").hide();
+                            var SpanSearch = $("#search").hide();
+                            $("#check1, #check2").click(function(){
+                                if($("#check1").is(":checked")){
+                                    Span1.show();
+                                    SpanSearch.show();
+                                }
+                                else if($("#check2").is(":checked")){
+                                    Span2.show();
+                                    SpanSearch.show();
+                                }
+                                else{
+                                    Span1.hide();
+                                    Span2.hide();
+                                    SpanSearch.hide();
+                                }
+                            });
+                        });
+                    </script>
 
-<form method="GET">
-    <div class="row">
-        <div class="col-xs-8">
-            Recherche par : 
-            <input type=checkbox id=check1> Nom
-            <input type=checkbox id=check2> Prénom
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-8">
-            <span id=bar1><input type="text" name="nom" placeholder="Rechercher Nom"></span>
-            <span id=bar2><input type="text" name="prenom" placeholder="Rechercher Prénom"></span>
-            <span id=search><input type="submit" value="Rechercher"></span>
-        </div>
-    </div>
-</form>
-        
-        
-        <div class="row">
-            <div class="text-right">
-                <a href="{{ path('deppop_back_end_ajouterRefugie') }}" class="btn btn-success btn-lg"><i class="fa fa-plus"></i> Ajouter un réfugié</a>
-            </div>
-        </div>
-    </section>
-    <section>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for refugie in refugies %}
-                <tr>
-                    <td>{{ refugie.nom }}</td>
-                    <td>{{ refugie.prenom }}</td>
-                    <td>
-                        <div class="btn-group">
-                            <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><i class="fa fa-cog"></i> Gérer <i class="fa fa-caret-down"></i></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ path('deppop_back_end_editionRefugie', {id: refugie.id}) }}"><i class="fa fa-pencil-square-o"></i> Editer</a></li>
-                                <li class="divider"></li>
-                                <li><a href="{{ path('deppop_back_end_suppressionRefugie', {id: refugie.id}) }}"><i class="fa fa-times"></i> Supprimer</a></li>
-                            </ul>
+                    <form method="GET">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                Recherche par : 
+                                <input type=checkbox id=check1> Nom
+                                <input type=checkbox id=check2> Prénom
+                            </div>
                         </div>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </section>
-</div>
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <span id=bar1><input type="text" name="nom" placeholder="Rechercher Nom"></span>
+                                <span id=bar2><input type="text" name="prenom" placeholder="Rechercher Prénom"></span>
+                                <span id=search><input type="submit" value="Rechercher"></span>
+                            </div>
+                        </div>
+                    </form>
+
+
+                            <div class="row">
+                                <div class="text-right">
+                                    <a href="{{ path('deppop_back_end_ajouterRefugie') }}" class="btn btn-success btn-lg"><i class="fa fa-plus"></i> Ajouter un réfugié</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Prénom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for refugie in refugies %}
+                                    <tr>
+                                        <td>{{ refugie.nom }}</td>
+                                        <td>{{ refugie.prenom }}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><i class="fa fa-cog"></i> Gérer <i class="fa fa-caret-down"></i></button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="{{ path('deppop_back_end_editionRefugie', {id: refugie.id}) }}"><i class="fa fa-pencil-square-o"></i> Editer</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="{{ path('deppop_back_end_suppressionRefugie', {id: refugie.id}) }}"><i class="fa fa-times"></i> Supprimer</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
 				
                 </div>
 				<div class="col-md-2 hidden-xs hidden-sm"></div>
@@ -177,9 +177,9 @@
 						<div class="col-md-6 entry_panel">
 							<h3 class="text-center"><i class="fa fa-rocket"></i> Navigation</h3>
 							<ul class="nav">
-								<li><a href="index.html"><i class="fa fa-plus-square"></i> Accueil</a></li>
-								<li><a href="blog.html"><i class="fa fa-newspaper-o"></i> Billets</a></li>
-								<li><a href="contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
+								<li><a href="index.html"><i class="fa fa-flask"></i> Accueil</a></li>
+								<li><a href="blog.html"><i class="fa fa-cogs"></i> Back Office</a></li>
+								<li><a href="contact.html"><i class="fa fa-search"></i> Recherche</a></li>
 							</ul>
 						</div>
 
