@@ -1,0 +1,30 @@
+{% include "deppopBackEndBundle:Default:navigation.html.twig" %}
+
+<h3>Liste des réfugiés</h3>
+
+<a href="{{ path('deppop_back_end_ajouterRefugie') }}">Ajouter un réfugié</a>
+
+<form method="GET">
+<input type="text" name="nom" placeholder="Rechercher Nom">
+<input type="text" name="prenom" placeholder="Rechercher Prénom">
+<input type="submit" value="Rechercher">
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for refugie in refugies %}
+        <tr>
+          <td>{{ refugie.nom }}</td>
+          <td>{{ refugie.prenom }}</td>
+          <td><a href="{{ path('deppop_back_end_editionRefugie', {id: refugie.id}) }}">Editer</a> | <a href="{{ path('deppop_back_end_suppressionRefugie', {id: refugie.id}) }}">Supprimer</a></td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
