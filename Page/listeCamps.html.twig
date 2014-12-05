@@ -11,6 +11,7 @@
 			<th>Nom</th>
 			<th>Position</th>
 			<th>Capacité</th>
+			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -25,6 +26,7 @@
 					&q={{ camp.position.x }},{{ camp.position.y }}">
 				</iframe></td>
 				<td>{{ camp.capacite }}</td>
+				<td><a href="{{ path('deppop_back_end_editionCamp', {id: camp.id}) }}">Editer</a></td>
 			</tr>
 		{% endfor %}
 	</tbody>
